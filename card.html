@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.main{
+width: 100wh;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.card{
+    width: 300px;
+    height: 450px;
+    border: 1px solid black;
+    overflow: hidden;
+    background-color: aqua;
+}
+.round{
+    width: 150px;
+    height: 320px;
+    border: 1px solid black;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+  background-color: white;
+   border-top: none;
+ margin-top: -49px;
+   transform: rotate(-45deg);  
+
+}
+</style>
+<body>
+    <div class="main">
+        <div class="card">
+            <div class="round"></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .main {
+        display: flex;
+        align-items: center;
+    }
+
+    button {
+        width: 50px;
+        height: 40px;
+
+
+    }
+
+    input {
+        width: 200px;
+        height: 30px;
+    }
+</style>
+
+<body>
+
+    <div class="main">
+        <button id="right_btn"></button>
+        <input type="text" id="innervalue">
+        <button id="left_btn"></button>
+
+    </div>
+    <h1 id="h1">
+
+    </h1>
+    <script>
+
+        let plusevalue = document.getElementById('right_btn')
+        let minusvalue = document.getElementById('left_btn')
+        let input = document.getElementById('innervalue')
+      
+        let count = 0;
+
+        function update() {
+            let i = input.setAttribute('value', count)
+        }
+        plusevalue.addEventListener('click', () => {
+            count++
+            update()
+            let h1=document.getElementById('h1')
+           let uptodate=count*250
+
+           h1.textContent=uptodate
+
+        })
+        minusvalue.addEventListener('click', () => {
+            if (count > 0) {
+                count--
+                update()
+                let h1=document.getElementById('h1')
+           let uptodate=count*250
+
+           h1.textContent=uptodate
+
+            }
+        })
+
+
+      
+
+
+
+
+
+    </script>
+</body>
+
+</html>

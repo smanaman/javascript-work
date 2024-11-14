@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<style>
+    body {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+
+    #station {
+        width: 197px;
+        height: 30px;
+    }
+
+    #droup {
+        width: 205px;
+        height: 300px;
+        /* display: none; */
+        position: absolute;
+    }
+
+    .list {
+        width: 203px;
+        height: 19%;
+        border: 1px solid black;
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+    
+    }
+    .f{
+        width: 203px;
+        height: 50%;
+        border: 1px solid black;
+      
+    }
+</style>
+
+<body>
+    <div class="main">
+        <input type="text" id="station">
+
+        <div id="droup">
+            <div  onclick="apple()"   class="list"  id="app">
+                <div >apple</div>
+                <div disabled >app</div>
+            </div>
+            <div onclick="banana()" id="apptwo" class="list">banana</div>
+            <div onclick="graps()" id="appthree" class="list">graps</div>
+            <div onclick="pine()" id="pine" class="list">pine apple</div>
+            <div onclick="kiwi()" id="kiwi" class="list">kiwi</div>
+        </div>
+    </div>
+
+    <!-- <batman class="bat">e3g5t4g5</batman> -->
+
+    <script>
+        $(document).ready(function () {
+
+            $('#station').click(function () {
+                $('#droup').toggle()
+
+            })
+
+        });
+    </script>
+
+    <script>
+        function apple() {
+
+            let app = document.getElementById('app')
+            let a = app.textContent
+
+            let input = document.getElementById('station')
+            let inp = input.setAttribute('value', a)
+
+        }
+        function banana() {
+
+            let apptwo = document.getElementById('apptwo')
+            let b = apptwo.textContent
+
+            let input = document.getElementById('station')
+            let inp = input.setAttribute('value', b)
+
+        }
+        function graps() {
+
+            let appthree = document.getElementById('appthree')
+            let c = appthree.textContent
+
+            let input = document.getElementById('station')
+            let inp = input.setAttribute('value', c)
+
+        }
+
+        function pine() {
+
+            let pine = document.getElementById('pine')
+            let d = pine.textContent
+
+            let input = document.getElementById('station')
+            let inp = input.setAttribute('value', d)
+
+        }
+
+        function kiwi() {
+
+let kiwi = document.getElementById('kiwi')
+let e = kiwi.textContent
+
+let input = document.getElementById('station')
+let inp = input.setAttribute('value', e)
+
+} 
+// $('.list').click(function () {
+//                 $('#droup').css('display','none')
+
+//             })
+       
+    </script>
+</body>
+
+</html>
