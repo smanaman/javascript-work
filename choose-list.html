@@ -24,7 +24,7 @@
         width: 205px;
         height: 300px;
         /* display: none; */
-        position: absolute;
+        /* position: absolute; */
     }
 
     .list {
@@ -34,35 +34,97 @@
         /* display: flex; */
         justify-content: center;
         align-items: center;
-    
+
     }
-    .f{
+    .list2 {
+        width: 203px;
+        height: 19%;
+        border: 1px solid black;
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .f {
         width: 203px;
         height: 50%;
         border: 1px solid black;
-      
+
     }
 </style>
 
 <body>
+  
     <div class="main">
         <input type="text" id="station">
 
         <div id="droup">
-            <div  onclick="apple()"   class="list"  id="app">
-                <div >apple</div>
-                <div disabled >app</div>
+            <div  class="list">
+                
+                apple
             </div>
-            <div onclick="banana()" id="apptwo" class="list">banana</div>
-            <div onclick="graps()" id="appthree" class="list">graps</div>
-            <div onclick="pine()" id="pine" class="list">pine apple</div>
-            <div onclick="kiwi()" id="kiwi" class="list">kiwi</div>
+            <div  id="apptwo" class="list">banana</div>
+            <div  id="appthree" class="list">graps</div>
+            <div id="pine" class="list">pine apple</div>
+            <div id="kiwi" class="list">kiwi</div>
         </div>
+
+        
     </div>
 
-    <!-- <batman class="bat">e3g5t4g5</batman> -->
+    <div class="main">
+        <input type="text" id="station_2">
 
-    <script>
+        <div id="droup">
+            <div  class="list2">apple </div>
+            <div  id="apptwo" class="list2">banana</div>
+            <div  id="appthree" class="list2">graps</div>
+            <div id="pine" class="list2">pine apple</div>
+            <div id="kiwi" class="list2">kiwi</div>
+        </div>
+
+        
+    </div>
+
+<script>
+    let l=document.querySelectorAll('.list')
+    let ll=document.querySelectorAll('.list2')
+ 
+    let inp2=document.getElementById('station_2')
+
+
+l.forEach(value=>{
+    value.addEventListener('click',()=>{
+
+let am=value.textContent
+
+ console.log(am);
+let inpt=document.getElementById('station')
+inpt.setAttribute('value',am)
+
+    })
+})
+ll.forEach(value=>{
+    value.addEventListener('click',()=>{
+
+let am=value.textContent
+
+// console.log(am);
+
+inp2.setAttribute('value',am)
+
+    })
+})
+
+    
+</script>
+
+
+
+
+
+    <!-- <script>
         $(document).ready(function () {
 
             $('#station').click(function () {
@@ -114,19 +176,18 @@
 
         function kiwi() {
 
-let kiwi = document.getElementById('kiwi')
-let e = kiwi.textContent
+            let kiwi = document.getElementById('kiwi')
+            let e = kiwi.textContent
 
-let input = document.getElementById('station')
-let inp = input.setAttribute('value', e)
+            let input = document.getElementById('station')
+            let inp = input.setAttribute('value', e)
 
-} 
-// $('.list').click(function () {
-//                 $('#droup').css('display','none')
+        }
+        // $('.list').click(function () {
+        //     $('#droup').css('display', 'none')
+        // })
 
-//             })
-       
-    </script>
+    </script> -->
 </body>
 
 </html>
